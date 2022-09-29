@@ -2,34 +2,51 @@
     margin:0px;
     padding:0px;
     box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace;
 }
+
+
 .container{
     background-image: linear-gradient(275deg , #00abfc, #00ff6c);
     height: 100vh;
     width:100vw;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+
+.love-icon{
+    color: red;
 
 }
+
+
+.heading{
+    margin: 1rem;
+}
+
 
 .calculator{
     display: flex;
     flex-direction: column;
-    width: 20%;
-    height:50%;
+    width: 30%;
+    height: 60%;
     background-color: whitesmoke;
-
 }
+
 
 #answer-display{
     height:20%;
     background-color: rgb(2, 56, 24);
     color: antiquewhite;
     font-size: 40px;
-    padding:12px 12px
+    padding:12px 12px;
+    margin:5px;
+
 }
+
 
 .calculator-body{
     height: 80%;
@@ -37,6 +54,8 @@
     flex-direction: column;
     justify-content: space-around;
 }
+
+
 .row{
     /* border:2px solid black; */
     height:20%;
@@ -45,6 +64,7 @@
     display: flex;
     justify-content: space-between;
 }
+
 
 .btn{
     width:25%;
@@ -55,11 +75,37 @@
     border: none;
     background-color: rgb(176, 234, 234);
 }
+
+
 .btn:hover{
     background-color: rgb(118, 202, 202);
 
-    
 }
+
+
 .btn-big{
     width:50%;
 }
+
+
+/* MAKING PAGE MOBILE RESPONSIVE */
+@media screen and (max-width: 1200px) {
+    .calculator{
+        width:40%;
+        height:60%;
+    }
+    .heading{
+        font-size: 25px;
+    }
+  }
+  
+  /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .calculator{
+        width:80%;
+        height:60%;
+    }
+    .heading{
+        font-size: 20px;
+    }
+  }
